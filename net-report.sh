@@ -6,7 +6,7 @@
 # Description: Script in shell to scan network range (up to /24) to generate CSV format reports.				#
 # Author: Marcus Costa														#
 # Email Address: marcus.asc@gmail.com												#
-# Execution Sample: "sh net-report.sh" or "./net-report.sh"								#
+# Execution Sample: "sh net-report.sh" or "./net-report.sh"									#
 # 																#
 #################################################################################################################################
 
