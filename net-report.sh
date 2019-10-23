@@ -1,12 +1,12 @@
 #!/bin/bash
 #################################################################################################################################
 #																#
-# Script Name: RelatorioRede.sh													#
+# Script Name: net-report.sh													#
 #  																#
 # Description: Script in shell to scan network range (up to /24) to generate CSV format reports.				#
 # Author: Marcus Costa														#
 # Email Address: marcus.asc@gmail.com												#
-# Execution Sample: "sh RelatorioRede.sh" or "./RelatorioRede.sh"								#
+# Execution Sample: "sh net-report.sh" or "./net-report.sh"								#
 # 																#
 #################################################################################################################################
 
