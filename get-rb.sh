@@ -18,6 +18,7 @@ origem="relatorio.txt"
 # Test if host is UP with a simple ICMP package.
 function testa_ping(){
 	echo > online.txt
+	# Using a "for" to read a list "relatorio.txt" to get addresses for execution.
 	for i in $(cat relatorio.txt | cut -d " " -f1)
 	 do
 		ping -c1 -W1 $i > /dev/null
@@ -50,8 +51,10 @@ function testa_porta(){
 # These following commands will show some informations about these Routerboard - You can edit it as well, according your necessity - trying some text filters to adequade the command return (I'm collect the IP address 2 time just for test, but you can set others informations like traffic, CPU consumption, etc.)
 function comandos(){
 	
-	comando1=`sshpass -p $senha ssh -o StrictHostKeyChecking=no $user@$1 -p $porta '/system identity print' | cut -d ":" -f2 | cut -d" " -f2 | head -n1 | tr -d ''`		
-	comando2=`sshpass -p $senha ssh -o StrictHostKeyChecking=no $user@$1 -p $porta '/ip address print' | egrep "*[0-9]" |  cut -d " " -f4- | cut -d "/" -f1 | tr -d ''`
+	comando1=`sshpass -p $senha ssh -o StrictHostKeyChecking=no $user@$1 -p $porta '/system identity print' | cut -d ":" -f2 | cut -d" " -f2 | head -n1 | tr -d '
+'`		
+	comando2=`sshpass -p $senha ssh -o StrictHostKeyChecking=no $user@$1 -p $porta '/ip address print' | egrep "*[0-9]" |  cut -d " " -f4- | cut -d "/" -f1 | tr -d '
+'`
 }
 # Running the functions
 testa_ping
